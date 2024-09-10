@@ -1,6 +1,6 @@
 import * as GetDevicesResponse from '../../../../../test/data/get-devices-response.json' with { type: 'json' };
-import { DeviceState, type Status } from '../../../../domain/device/models/device-state.js';
-import { Device } from '../../../../domain/device/models/device.js';
+import { DeviceState, type Status } from '../../../../domain/device/entities/device-state.js';
+import { Device } from '../../../../domain/device/entities/device.js';
 import { type DeviceRepository } from '../../../../domain/device/repositories/device-repository.js';
 import { logger } from '../../../../utils/logger.js';
 

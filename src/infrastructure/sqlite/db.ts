@@ -1,7 +1,7 @@
 import { MikroORM, type Options, type EntityManager, ReflectMetadataProvider } from '@mikro-orm/sqlite';
 import config from './mikro-orm.config.js';
 import { type InMemoryDeviceRepository } from './device/repositories/device-repository.js';
-import { DeviceEntity } from './device/models/device.entity.js';
+import { DeviceEntity } from './device/entities/device.entity.js';
 
 export interface Services {
 	orm: MikroORM;
