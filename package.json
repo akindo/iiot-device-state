@@ -1,0 +1,49 @@
+{
+	"name": "iiot-device-state",
+	"version": "0.0.0",
+	"license": "UNLICENSED",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/akindo/iiot-device-state.git"
+	},
+	"engines": {
+		"node": "^20.17.0",
+		"npm": "^10.8.2"
+	},
+	"type": "module",
+	"main": "./dist/src/app.js",
+	"scripts": {
+		"tsc": "tsc --noEmit",
+		"build": "tsc --build",
+		"build:watch": "tsc --build --watch",
+		"clean": "tsc --build --clean",
+		"dev": "NODE_ENV=development concurrently \"npm run build:watch\" \"npm run start:watch\"",
+		"dev:standard": "npm run build && NODE_ENV=development npm start",
+		"start": "node .",
+		"start:watch": "node --watch .",
+		"test": "npm run test:unit && npm run test:integration",
+		"test:unit": "NODE_ENV=test mocha dist/test/**/*unit.test.js --exit --recursive --timeout 15000",
+		"test:integration": "NODE_ENV=test mocha dist/test/**/*integration.test.js --exit --recursive --timeout 15000",
+		"test:coverage": "npm test -- --coverage",
+		"lint": "npx xo",
+		"lint:fix": "npx xo --fix",
+		"prettier": "prettier --check ./src/**/*.ts",
+		"prettier:fix": "prettier --write ./src/**/*.ts",
+		"ci": "npm i && npm run lint && npm run build && npm test"
+	},
+	"devDependencies": {
+		"@types/mocha": "10.0.7",
+		"@types/node": "22.5.4",
+		"concurrently": "9.0.0",
+		"mocha": "10.7.3",
+		"prettier": "3.3.3",
+		"typescript": "5.6.2",
+		"xo": "0.59.3"
+	},
+	"dependencies": {
+		"@mikro-orm/core": "6.3.9",
+		"@mikro-orm/migrations": "6.3.9",
+		"@mikro-orm/seeder": "6.3.9",
+		"@mikro-orm/sqlite": "6.3.9"
+	}
+}

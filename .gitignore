@@ -1,0 +1,14 @@
+# Directories
+.idea/
+.vscode/
+coverage/
+/dist/
+node_modules/
+
+# Files
+*.d.ts
+*.js
+*.js.map
+.DS_Store
+tsconfig.tsbuildinfo
+sqlite.db

@@ -1,0 +1,29 @@
+[
+	{
+		"id": "413bb126-3aef-4a6a-8f90-99188126f159",
+		"name": "Device 4",
+		"state": {
+			"status": "online",
+			"softwareVersion": "3.0.5",
+			"lastReportedAt": "2024-09-09T21:02:55Z"
+		}
+	},
+	{
+		"id": "d531a42e-9067-4f71-9469-1fd1110933c0",
+		"name": "Device 5",
+		"state": {
+			"status": "offline",
+			"softwareVersion": "3.0.3",
+			"lastReportedAt": "2024-09-09T13:44:18Z"
+		}
+	},
+	{
+		"id": "98c7f267-531d-45c7-ba0e-dfa99f033cf5",
+		"name": "Device 6",
+		"state": {
+			"status": "online",
+			"softwareVersion": "3.0.4",
+			"lastReportedAt": "2024-09-09T14:28:41Z"
+		}
+	}
+]
