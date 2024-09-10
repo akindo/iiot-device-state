@@ -1,6 +1,6 @@
-import { MikroORM, Options, EntityManager, ReflectMetadataProvider } from '@mikro-orm/sqlite';
+import { MikroORM, type Options, type EntityManager, ReflectMetadataProvider } from '@mikro-orm/sqlite';
 import config from './mikro-orm.config.js';
-import { InMemoryDeviceRepository } from './device/repositories/device-repository.js';
+import { type InMemoryDeviceRepository } from './device/repositories/device-repository.js';
 import { DeviceEntity } from './device/models/device.entity.js';
 
 export interface Services {
@@ -11,7 +11,7 @@ export interface Services {
 
 let cache: Services;
 
-export async function initORM(options?: Options): Promise<Services> {
+export async function initOrm(options?: Options): Promise<Services> {
 	if (cache) {
 		return cache;
 	}
@@ -24,9 +24,11 @@ export async function initORM(options?: Options): Promise<Services> {
 	});
 
 	// save to cache before returning
-	return (cache = {
+	cache = {
 		orm,
 		em: orm.em,
 		deviceRepository: orm.em.getRepository(DeviceEntity),
-	});
+	};
+
+	return cache;
 }

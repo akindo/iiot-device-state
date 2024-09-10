@@ -1,4 +1,4 @@
-import 'reflect-metadata';
+import _ from 'reflect-metadata';
 import { main } from './main.js';
 import { getErrorMessage } from './utils/error-handling.js';
 

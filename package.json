@@ -1,6 +1,6 @@
 {
 	"name": "iiot-device-state",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"license": "UNLICENSED",
 	"repository": {
 		"type": "git",
@@ -44,6 +44,7 @@
 		"@mikro-orm/core": "6.3.9",
 		"@mikro-orm/migrations": "6.3.9",
 		"@mikro-orm/seeder": "6.3.9",
-		"@mikro-orm/sqlite": "6.3.9"
+		"@mikro-orm/sqlite": "6.3.9",
+		"reflect-metadata": "0.2.2"
 	}
 }

@@ -1,6 +1,6 @@
 import { Seeder } from '@mikro-orm/seeder';
+import { type EntityManager } from '@mikro-orm/sqlite';
 import { Status } from '../../../domain/device/models/device-state.js';
-import { EntityManager } from '@mikro-orm/sqlite';
 import { DeviceEntity } from '../device/models/device.entity.js';
 import { DeviceStateEntity } from '../device/models/device-state.entity.js';
 import { logger } from '../../../utils/logger.js';

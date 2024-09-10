@@ -1,7 +1,7 @@
 import * as GetDevicesResponse from '../../../../../test/data/get-devices-response.json' with { type: 'json' };
-import { DeviceState, Status } from '../../../../domain/device/models/device-state.js';
+import { DeviceState, type Status } from '../../../../domain/device/models/device-state.js';
 import { Device } from '../../../../domain/device/models/device.js';
-import { DeviceRepository } from '../../../../domain/device/repositories/device-repository.js';
+import { type DeviceRepository } from '../../../../domain/device/repositories/device-repository.js';
 import { logger } from '../../../../utils/logger.js';
 
 export class AwsDeviceRepository implements DeviceRepository {

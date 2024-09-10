@@ -1,14 +1,14 @@
 import type { IncomingMessage, ServerResponse } from 'node:http';
 import { logger } from '../../../utils/logger.js';
-import { InMemoryDeviceRepository } from '../../../infrastructure/sqlite/device/repositories/device-repository.js';
-import { AwsDeviceRepository } from '../../../infrastructure/aws/device/repositories/device-repository.js';
+import { type InMemoryDeviceRepository } from '../../../infrastructure/sqlite/device/repositories/device-repository.js';
+import { type AwsDeviceRepository } from '../../../infrastructure/aws/device/repositories/device-repository.js';
 
 const apiVersion = 'v1';
 
 async function deviceRouter(
 	request: IncomingMessage,
 	response: ServerResponse,
-	dbRepository: InMemoryDeviceRepository,
+	databaseRepository: InMemoryDeviceRepository,
 	awsDeviceRepository: AwsDeviceRepository
 ) {
 	if (request.method === 'GET') {
@@ -33,7 +33,7 @@ async function deviceRouter(
 				// TODO: consider using the Mediator pattern to decouple the presentation and application layers.
 				// const deviceService = new DeviceService(db.deviceRepository);
 				// const devices = await deviceService.getAll();
-				const devices = await dbRepository.getAll();
+				const devices = await databaseRepository.getAll();
 
 				response.writeHead(200, { 'Content-Type': 'application/json' });
 				response.end(JSON.stringify(devices));

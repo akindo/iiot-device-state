@@ -1,6 +1,6 @@
+import { Entity, EntityRepositoryType, Property } from '@mikro-orm/sqlite';
 import { InMemoryDeviceRepository } from '../repositories/device-repository.js';
 import { BaseEntity } from '../../common/base-entity.js';
-import { Entity, EntityRepositoryType, Property } from '@mikro-orm/sqlite';
 import { DeviceState, Status } from '../../../../domain/device/models/device-state.js';
 
 @Entity({ repository: () => InMemoryDeviceRepository })

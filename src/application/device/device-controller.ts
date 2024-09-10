@@ -1,5 +1,5 @@
-import { Device } from '../../domain/device/models/device.js';
-import { DeviceRepository } from '../../domain/device/repositories/device-repository.js';
+import { type Device } from '../../domain/device/models/device.js';
+import { type DeviceRepository } from '../../domain/device/repositories/device-repository.js';
 import { logger } from '../../utils/logger.js';
 
 export class DeviceService {

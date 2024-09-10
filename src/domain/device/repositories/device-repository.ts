@@ -1,4 +1,4 @@
-import { Device } from '../models/device.js';
+import { type Device } from '../models/device.js';
 
 export interface DeviceRepository {
 	// create(device: Device): Promise<Device>;

@@ -5,5 +5,18 @@
 		"unicorn/switch-case-braces": "off",
 		"no-warning-comments": "off",
 		"capitalized-comments": "off"
-	}
+	},
+	"overrides": [
+		{
+			"files": [
+				"src/infrastructure/sqlite/device/models/device-state.entity.ts",
+				"src/infrastructure/sqlite/common/base-entity.ts",
+				"src/infrastructure/sqlite/device/models/device.entity.ts"
+			],
+			"rules": {
+				"new-cap": "off",
+				"@typescript-eslint/member-ordering": "off"
+			}
+		}
+	]
 }
